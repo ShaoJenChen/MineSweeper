@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minesweeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-qM-wqy">
+                                <rect key="frame" x="146" y="0.0" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mSz-qM-wqy" secondAttribute="height" id="fsV-0t-1pC"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="60C-lD-Jg0">
+                                    <size key="itemSize" width="108" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MineCell" id="ZeE-EK-pOB" customClass="MineCell" customModule="Minesweeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4L-MH-bxq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="96"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2f-tX-2QX">
+                                                            <rect key="frame" x="33" y="37.5" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="i2f-tX-2QX" firstAttribute="centerX" secondItem="G4L-MH-bxq" secondAttribute="centerX" id="9ep-mv-5fe"/>
+                                                        <constraint firstItem="i2f-tX-2QX" firstAttribute="centerY" secondItem="G4L-MH-bxq" secondAttribute="centerY" id="sHO-iO-Csb"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="G4L-MH-bxq" firstAttribute="leading" secondItem="ZeE-EK-pOB" secondAttribute="leading" id="GCl-3S-xTS"/>
+                                            <constraint firstItem="G4L-MH-bxq" firstAttribute="top" secondItem="ZeE-EK-pOB" secondAttribute="top" id="gyT-gJ-6Gv"/>
+                                            <constraint firstAttribute="bottom" secondItem="G4L-MH-bxq" secondAttribute="bottom" id="iG7-4y-hwb"/>
+                                            <constraint firstAttribute="trailing" secondItem="G4L-MH-bxq" secondAttribute="trailing" id="mZA-Bw-VFb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mineCountLabel" destination="i2f-tX-2QX" id="J4b-Jd-EKN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LaB-bz-CWb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LVD-y4-HWA"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mSz-qM-wqy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UfH-Jt-1mA"/>
+                            <constraint firstItem="mSz-qM-wqy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WYT-2k-lPd"/>
+                            <constraint firstItem="mSz-qM-wqy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="j2d-Hf-zDO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="minesColletcionView" destination="mSz-qM-wqy" id="Sry-hi-KsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.27736131934034" y="125.59999999999999"/>
+        </scene>
+    </scenes>
+</document>
