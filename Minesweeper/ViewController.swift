@@ -27,6 +27,14 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func restart(_ sender: UIButton) {
+        
+        self.createNewGame()
+        
+        self.minesColletcionView.reloadData()
+        
+    }
+    
     private func createNewGame() {
         
         self.createRandomMinesArray()
