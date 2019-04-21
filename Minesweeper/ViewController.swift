@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let dimesional = 10
+    let dimesional = 8
     
     var minesweeperArray: [[Int]]!
     
@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     private func createRandomMinesArray() {
         
         //random mineCount
-//        var randomMineNumber = Int.random(in: (dimesional * dimesional)/10 ... (dimesional * dimesional)/4 )
-        var randomMineNumber = Int.random(in: 5 ... 15)
+        var randomMineNumber = Int.random(in: (dimesional * dimesional)/10 ... (dimesional * dimesional)/4 )
+//        var randomMineNumber = Int.random(in: 5 ... 15)
         
         self.totlaMineNumber = randomMineNumber
         
@@ -191,7 +191,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = collectionView.frame.width / 10
+        let cellWidth = collectionView.frame.width / CGFloat(dimesional)
         
         let cellSize = CGSize(width: cellWidth, height: cellWidth)
         
