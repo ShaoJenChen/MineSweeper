@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     private func createRandomMinesArray() {
         
         //random mineCount
-        var randomMineNumber = Int.random(in: (dimesional * dimesional)/10 ... (dimesional * dimesional)/4 )
+//        var randomMineNumber = Int.random(in: (dimesional * dimesional)/10 ... (dimesional * dimesional)/4 )
+        var randomMineNumber = Int.random(in: 5 ... 15)
         
         self.totlaMineNumber = randomMineNumber
         
