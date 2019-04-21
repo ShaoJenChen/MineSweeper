@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         
         self.createNewGame()
         
+        self.minesColletcionView.isUserInteractionEnabled = true
+        
         self.minesColletcionView.reloadData()
         
     }
