@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func restart(_ sender: UIButton) {
+    @IBAction func restart(_ sender: ShakeButton) {
+        
+        sender.shake()
         
         self.createNewGame()
         

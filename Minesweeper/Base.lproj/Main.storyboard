@@ -108,11 +108,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="LVD-y4-HWA"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay9-kN-qgr">
-                                <rect key="frame" x="281" y="555" width="78" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay9-kN-qgr" customClass="ShakeButton" customModule="Minesweeper" customModuleProvider="target">
+                                <rect key="frame" x="272" y="555" width="87" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="YJ6-XH-YVb"/>
+                                    <constraint firstAttribute="width" constant="87" id="svE-hc-hht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="重新開始">
-                                    <color key="titleColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qi1-9Q-aEs"/>
@@ -124,25 +128,35 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ay9-kN-qgr" secondAttribute="trailing" constant="16" id="DS9-dS-I8e"/>
                             <constraint firstItem="mSz-qM-wqy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="IOY-FX-2WQ"/>
                             <constraint firstItem="ay9-kN-qgr" firstAttribute="top" secondItem="mSz-qM-wqy" secondAttribute="bottom" constant="34" id="IXq-Jw-six"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ay9-kN-qgr" secondAttribute="trailing" constant="20" id="KrJ-TN-41V"/>
                             <constraint firstItem="mSz-qM-wqy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mir-ZJ-pZ0"/>
                             <constraint firstItem="mSz-qM-wqy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U3Q-24-6oV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ay9-kN-qgr" secondAttribute="bottom" constant="20" id="lE3-cF-K9p"/>
                             <constraint firstItem="mSz-qM-wqy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="sDs-JT-lvl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DS9-dS-I8e"/>
+                                <exclude reference="KrJ-TN-41V"/>
+                                <exclude reference="lE3-cF-K9p"/>
                                 <exclude reference="sDs-JT-lvl"/>
+                                <exclude reference="IXq-Jw-six"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="KrJ-TN-41V"/>
+                                <include reference="lE3-cF-K9p"/>
                                 <exclude reference="sDs-JT-lvl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="DS9-dS-I8e"/>
                                 <exclude reference="IOY-FX-2WQ"/>
                                 <include reference="sDs-JT-lvl"/>
+                                <include reference="IXq-Jw-six"/>
                             </mask>
                         </variation>
                     </view>
@@ -152,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142.57871064467767" y="124"/>
+            <point key="canvasLocation" x="141.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
     <resources>
